@@ -22,7 +22,7 @@ The original data came from the Cleavland data from the UCI Machine Learning Rep
 This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to
 this date. The "goal" field refers to the presence of heart disease in the patient. It is integer valued from 0 (no presence) to 4.
 <br /><br />
-<img src="add data-shot.png URL here" width="900" height="400">
+<img src="https://github.com/GKPSingh/Heart_Disease_Predictor_Model/blob/main/images/data-shot.png" width="900" height="400">
 
 ## Data Attributes' / Features' Information
 + age - age in years
@@ -72,7 +72,7 @@ I imported several libraries for the project:
 + seaborn: To create different category charts
 + train_test_split: To split the dataset into training and testing data
 <br /><br />
-<img src="add heat-map.png URL here" width="900" height="400">
+<img src="https://github.com/GKPSingh/Heart_Disease_Predictor_Model/blob/main/images/heat-map.png" width="900" height="400">
 
 ## Approach
 1. Data Wrangling
