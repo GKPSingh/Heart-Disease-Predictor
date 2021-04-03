@@ -4,7 +4,6 @@
 This notebook is dedicated to the prediction of heart disease among the individuals based on the different characteristics 
 of their health condition by using Data Science and Machine Learning Models.
 
-https://www.healthimaging.com/sites/default/files/styles/media_image_mobile/public/2018-08/digital-heart-beat.jpg?itok=E4AO-UKK
 
 
 Following Approah will be implemented:
