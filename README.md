@@ -4,7 +4,7 @@
 This notebook is dedicated to the prediction of heart disease among the individuals based on the different characteristics 
 of their health condition by using Data Science and Machine Learning Models.
 
-https://www.healthimaging.com/sites/default/files/styles/media_image_mobile/public/2018-08/digital-heart-beat.jpg?itok=E4AO-UKK
+![Heart1](https://user-images.githubusercontent.com/65918602/113466779-5ca88b00-940c-11eb-9b0e-7580cb302b8a.jpg)
 
 
 Following Approah will be implemented:
@@ -89,7 +89,8 @@ Information of different attributes of data is given below:
 14. target - have disease or not (1=yes, 0=no) (= the 
              predicted attribute)
              
-             
+
+
 #### Approach
 1. Apply data wrangling, exploratory data analysis on the data set.
 
