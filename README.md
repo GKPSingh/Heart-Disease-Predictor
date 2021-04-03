@@ -4,8 +4,6 @@
 This notebook is dedicated to the prediction of heart disease among the individuals based on the different characteristics 
 of their health condition by using Data Science and Machine Learning Models.
 
-<<<<<<< HEAD
-=======
 ![Heart1](https://user-images.githubusercontent.com/65918602/113466779-5ca88b00-940c-11eb-9b0e-7580cb302b8a.jpg)
 >>>>>>> 03c1efc34429b49d1564f9534f47f243c455c30d
 
