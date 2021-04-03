@@ -91,7 +91,7 @@ Information of different attributes of data is given below:
 
 
 #### Approach
-<img src=![Hearttech](https://user-images.githubusercontent.com/65918602/113466784-603c1200-940c-11eb-8fd3-45dc8836f7c0.jpg) width = '100'>
+![Hearttech](https://user-images.githubusercontent.com/65918602/113466784-603c1200-940c-11eb-8fd3-45dc8836f7c0.jpg)
 
 
 1. Apply data wrangling, exploratory data analysis on the data set.
