@@ -92,6 +92,8 @@ Information of different attributes of data is given below:
 
 
 #### Approach
-1. Apply data wrangling, exploratory data analysis on the data set.
+![Hearttech](https://user-images.githubusercontent.com/65918602/113466784-603c1200-940c-11eb-8fd3-45dc8836f7c0.jpg)
 
+
+1. Apply data wrangling, exploratory data analysis on the data set.
 2. For modeling, apply Logistic Regression, K-Nearest Neighbors, Random Forest for this supervised learning problem.
