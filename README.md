@@ -1,13 +1,11 @@
-# Heart_Disease_Predictor_Model
+# Heart Disease Predictor
+<img src="https://user-images.githubusercontent.com/65918602/113466784-603c1200-940c-11eb-8fd3-45dc8836f7c0.jpg" width="900" height="400">
 
-### Predicting heart disease using machine learning
-This notebook is dedicated to the prediction of heart disease among the individuals based on the different characteristics 
-of their health condition by using Data Science and Machine Learning Models.
+## Introduction
+This project is dedicated to the prediction of heart disease among the individuals based on the different characteristics 
+of their health condition by using <b>Data Science and Machine Learning</b>.
 
-![Heart1](https://user-images.githubusercontent.com/65918602/113466779-5ca88b00-940c-11eb-9b0e-7580cb302b8a.jpg)
-
-Following Approah will be implemented:
-
+Following Approach will be implemented:
 * Problem definition
 * Data
 * Evaluation
@@ -15,84 +13,78 @@ Following Approah will be implemented:
 * Modelling
 * Experimentation
 
-#### 1. Problem Defination
-Based on the health parameters, will it be possible to predict whether the individual has the heart disease or not??
+## Problem Definition
+Machine Learning can play an important role in predicting healthcare, e.g. predicting hearth disease, chances of getting blood cancer etc. Such information, if predicted well in advance; can provide important insights to physicians, who can then adapt their diagnosis and treatment per patient basis.
+So I want to test if based on the health parameters, will it be possible to predict whether the individual has the heart disease or not? Also with what accuracy such predictions can be made?
 
-#### 2. Data Collection
+## Data Collection
 The original data came from the Cleavland data from the UCI Machine Learning Repository. https://archive.ics.uci.edu/ml/datasets/heart+Disease
+This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to
+this date. The "goal" field refers to the presence of heart disease in the patient. It is integer valued from 0 (no presence) to 4.
+<br /><br />
+<img src="add data-shot.png URL here" width="900" height="400">
 
-#### 3. Evaluation
-If after modeling, the accuracy of the model to predict comes out to be more than 95%, the project will be persued further.
+## Data Attributes' / Features' Information
++ age - age in years
++ sex (2 values)
+    - 0 = female
+    - 1 = male
++ cp - chest pain type (4 values)
+    - 0: Typical angina: chest pain related decrease blood supply to the heart
+    - 1: Atypical angina: chest pain not related to heart
+    - 2: Non-anginal pain: typically esophageal spasms (non heart related)
+    - 3: Asymptomatic: chest pain not showing signs of disease
++ trestbps - resting blood pressure (in mm Hg on admission to the hospital). anything above 130-140 is typically cause for concern
++ chol - serum cholestoral in mg/dl. serum = LDL + HDL + .2 * triglyceride above 200 is cause for concern
++ fbs - fasting blood sugar > 120 mg/dl. '>126' mg/dL signals diabetes (2 values)
+    - 1 = true
+    - 0 = false
++ restecg - resting electrocardiographic results (3 values)
+    - 0 = Nothing to note
+    - 1 = ST-T Wave abnormality
+        - can range from mild symptoms to severe problems
+        - signals non-normal heart beat
+    - 2: Possible or definite left ventricular hypertrophy
+        - Enlarged heart's main pumping chamber
++ thalach - maximum heart rate achieved
++ exang - exercise induced angina (2 values)
+    - 0 = no
+    - 1 = yes
++ oldpeak - ST depression induced by exercise relative to rest
++ slope - the slope of the peak exercise ST segment (3 values)
+    - 0 =  Up sloping: better heart rate with exercise (uncommon)
+    - 1 = Flat sloping: minimal change (typical healthy heart)
+    - 2 = Down sloping: signs of unhealthy heart
++ ca - number of major vessels (0-3) colored by flourosopy
++ thal - thalium stress result (7 values)
+    - 1 - 3 = normal
+    - 6 = fixed defect: used to be but ok now
+    - 7 = reversible defect: no proper blood movement when exercising
++ target (2 values)
+    - 0 = no
+    - 1 = yes
 
-#### 4. Features
-Information of different attributes of data is given below:
+## Important Libraries
+I imported several libraries for the project:
++ numpy: To work with arrays
++ pandas: To work with csv files and dataframes
++ matplotlib: To create charts
++ seaborn: To create different category charts
++ train_test_split: To split the dataset into training and testing data
+<br /><br />
+<img src="add heat-map.png URL here" width="900" height="400">
 
-###### Create data dictionary
+## Approach
+1. Data Wrangling
+2. Exploratory Data Analysis (EDA) on the data set.
+3. For modeling, I have identified 3 models to try: 
+    - Logistic Regression
+        - Predict the label of a data point by linear function
+    - K-Nearest Neighbors
+        - Predict the label of a data point by
+            - Looking at the 'k' closest labeled data points
+            - Taking a majority vote
+    - Random Forest
+        - Predict the label of a data point by ensembling decision trees, which is correct for decision trees' habit of overfitting.
+4. Test size of Train-Test-Split is set to 20%
 
-1. age - age in years
-2. sex - (1 = male; 0 = female)
-3. cp - chest pain type
-
-   * 0: Typical angina: chest pain related decrease blood supply to the heart
-
-   * 1: Atypical angina: chest pain not related to heart
-   
-   * 2: Non-anginal pain: typically esophageal spasms (non 
-        heart related)
-   * 3: Asymptomatic: chest pain not showing signs of   
-        disease
-4. trestbps - resting blood pressure (in mm Hg on admission 
-             to the hospital) anything above 130-140 is  
-             typically cause for    concern
-
-5. chol - serum cholestoral in mg/dl
-   * serum = LDL + HDL + .2 * triglycerides
-   * above 200 is cause for concern
-
-6. fbs - (fasting blood sugar > 120 mg/dl) (1 = true; 0 =   
-   false)
-   * '>126' mg/dL signals diabetes
-
-7. restecg - resting electrocardiographic results
-   * 0: Nothing to note
-   * 1: ST-T Wave abnormality
-       * can range from mild symptoms to severe problems
-       * signals non-normal heart beat
-    * 2: Possible or definite left ventricular hypertrophy
-        * Enlarged heart's main pumping chamber
-
-8. thalach - maximum heart rate achieved
-
-9. exang - exercise induced angina (1 = yes; 0 = no)
-
-10. oldpeak - ST depression induced by exercise relative to 
-             rest looks at stress of heart during excercise unhealthy heart will stress more
-
-11. slope - the slope of the peak exercise ST segment
-    * 0: Upsloping: better heart rate with excercise  
-       (uncommon)
-    * 1: Flatsloping: minimal change (typical healthy heart)
-    * 2: Downslopins: signs of unhealthy heart
-
-12. ca - number of major vessels (0-3) colored by flourosopy
-        * colored vessel means the doctor can see the blood 
-          passing through
-        * the more blood movement the better (no clots)
-
-13. thal - thalium stress result
-      * 1,3: normal
-      * 6: fixed defect: used to be defect but ok now
-      * 7: reversable defect: no proper blood movement when 
-           excercising
-
-14. target - have disease or not (1=yes, 0=no) (= the 
-             predicted attribute)
-             
-
-
-#### Approach
-![Hearttech](https://user-images.githubusercontent.com/65918602/113466784-603c1200-940c-11eb-8fd3-45dc8836f7c0.jpg)
-
-
-1. Apply data wrangling, exploratory data analysis on the data set.
-2. For modeling, apply Logistic Regression, K-Nearest Neighbors, Random Forest for this supervised learning problem.
